@@ -15,6 +15,8 @@
 #
 LOCAL_PATH := $(call my-dir)
 
+ifneq ($(BOARD_HAVE_MARVELL_WIFI),)
+
 ifeq ($(WPA_SUPPLICANT_VERSION),VER_0_8_X)
 
 ifneq ($(BOARD_WPA_SUPPLICANT_DRIVER),)
@@ -64,3 +66,5 @@ include $(BUILD_STATIC_LIBRARY)
 ########################
 
 endif
+endif
+
